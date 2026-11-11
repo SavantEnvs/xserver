@@ -1,0 +1,8 @@
+project: savantenvs/xserver
+target: xkm_read
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/xkm_read/testsuite
+cmds:
+  - cmd: /mayhem/xkm_read
+    libfuzzer: true

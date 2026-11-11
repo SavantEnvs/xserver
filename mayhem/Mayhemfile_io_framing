@@ -1,0 +1,8 @@
+project: savantenvs/xserver
+target: io_framing
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/io_framing/testsuite
+cmds:
+  - cmd: /mayhem/io_framing
+    libfuzzer: true

@@ -1,0 +1,9 @@
+project: savantenvs/xserver
+target: xorg_conf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/xorg_conf/testsuite
+cmds:
+  - cmd: /mayhem/xorg_conf
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/xorg_conf/xorg_conf.dict
